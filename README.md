@@ -18,13 +18,13 @@ Cleaned a messy, manually-entered employee sales dataset into an analytics-ready
 
 ## Demo (Before → After)
 
-![Raw data](SCREENSHOTS/1_raw_data.png)
+![Raw data](screenshots/1_raw_data.png)
 
-![Power Query steps](SCREENSHOTS/2_power_query_steps.png)
+![Power Query steps](screenshots/2_power_query_steps.png)
 
 ![Refresh demo](assets/refresh_demo.svg)
 
-![Final output](SCREENSHOTS/3_final_output.png)
+![Final output](screenshots/3_final_output.png)
 
 ---
 
@@ -36,34 +36,54 @@ Cleaned a messy, manually-entered employee sales dataset into an analytics-ready
 4. Unpivoted regional columns (North/South/East/West) into `Attribute` and `Value` to convert wide → long format.
 5. Standardized data types (text for names/codes, numeric for sales) and validated totals to ensure accuracy.
 
-These steps are implemented entirely inside Power Query's Applied Steps — non-destructive and refreshable. See `APPLIED_STEPS.md` for the full Applied Steps and the Power Query M code.
+These steps are implemented entirely inside Power Query's Applied Steps — non-destructive and refreshable. See `docs/APPLIED_STEPS.md` for the full Applied Steps and the Power Query M code.
 
 ---
 
-## Files in this project
+## Project Structure
 
-- `APPLIED_STEPS.md` — full Applied Steps and the exported Power Query M script
-- `sample_raw_data.csv` — a small messy sample you can open and test in Excel
-- `assets/refresh_demo.svg` — a tiny animated demo showing Open → Refresh → Done in the viewer
-- `SCREENSHOTS/` — before/after screenshots of raw data, applied steps, and final output
-- `PROJECT_ONE_PAGER.md` — a printable one-page summary you can attach to applications
-- `TALKING_POINTS.md` — short bullets to rehearse for interviews
-- `LICENSE` — MIT license
+```
+📦 power-query-sales-analysis-mini_project
+├── 📄 README.md
+├── 📄 LICENSE
+├── 📄 CODE_OF_CONDUCT.md
+├── 📄 .gitignore
+│
+├── 📁 docs/                          # Documentation
+│   ├── 📄 APPLIED_STEPS.md          # Full M code and step breakdown
+│   ├── 📄 PROJECT_ONE_PAGER.md      # One-page project summary
+│   └── 📄 TALKING_POINTS.md         # 60-second interview pitch
+│
+├── 📁 data/                          # Data files
+│   ├── 📁 raw/                      # Input data
+│   │   ├── 📊 raw_data.xlsx
+│   │   └── 📊 sample_raw_data.csv
+│   └── 📁 cleaned/                  # Output data
+│       └── 📊 cleaned_data.xlsx
+│
+├── 📁 screenshots/                   # Visual demos
+│   ├── 🖼️ 1_raw_data.png
+│   ├── 🖼️ 2_power_query_steps.png
+│   └── 🖼️ 3_final_output.png
+│
+└── 📁 assets/                        # Animations & SVGs
+    └── 🎬 refresh_demo.svg
+```
 
 ---
 
 ## How to reproduce / use (open & refresh)
 
-1. Open `sample_raw_data.csv` or `raw_data.xlsx` in Microsoft Excel (Desktop) with Power Query (Get & Transform Data).
+1. Open `data/raw/sample_raw_data.csv` or `data/raw/raw_data.xlsx` in Microsoft Excel (Desktop) with Power Query (Get & Transform Data).
 2. Go to **Data → Get Data → From File → From Workbook / From Text/CSV** and point to the sample file.
-3. In Power Query Editor, inspect the query's Applied Steps (open `APPLIED_STEPS.md` to see the exact M code used).
+3. In Power Query Editor, inspect the query's Applied Steps (open `docs/APPLIED_STEPS.md` to see the exact M code used).
 4. Click **Close & Load → Refresh** to run the transformation on new data — no manual edits required.
 
 **Tip:** Keep the original `raw_data.xlsx` structure consistent (same column headers) so the query steps apply correctly on refresh.
 
 ---
 
-## Skills & Tools demonstrated
+## Skills & Tools Demonstrated
 
 - **Data cleaning & wrangling**
 - **Excel Power Query:** parsing, splitting, merging columns, unpivoting, and type enforcement
@@ -73,14 +93,15 @@ These steps are implemented entirely inside Power Query's Applied Steps — non-
 
 ---
 
-## Notes for interviewers
+## Notes for Interviewers
 
 - I can walk through the Applied Steps and explain each transformation, trade-offs, and how to adapt the query when new data quirks appear.
 - I can demonstrate live during an interview or share a short recorded walkthrough.
+- The M script is fully adaptable to different data sources (CSVs, databases, Power BI).
 
 ---
 
-## See also
+## See Also
 
 Explore more of my projects:
 
@@ -90,9 +111,12 @@ Explore more of my projects:
 
 ---
 
-## One-pager & Talking points
+## Quick Links
 
-See `PROJECT_ONE_PAGER.md` and `TALKING_POINTS.md` for a printable one-pager and a 60-second verbal summary you can use in interviews.
+- 📖 **Full Documentation:** `docs/APPLIED_STEPS.md`
+- 📋 **One-Pager:** `docs/PROJECT_ONE_PAGER.md`
+- 🎤 **Interview Pitch:** `docs/TALKING_POINTS.md`
+- 📊 **Sample Data:** `data/raw/sample_raw_data.csv`
 
 ---
 
