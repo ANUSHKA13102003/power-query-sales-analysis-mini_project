@@ -1,0 +1,9 @@
+First Name,Last Name,North,South,East,West
+John,Green(121),100,200,150,120
+Jane,Smith(122),80,90,100,110
+Ali,Khan(123),50,60,55,65
+Sara,Lee(124),120,110,130,115
+
+# Example of a messy blank row below (Power Query will remove it)
+
+,, , , ,
