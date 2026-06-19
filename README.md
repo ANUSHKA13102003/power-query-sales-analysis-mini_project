@@ -1,10 +1,8 @@
-# 📊 Power Query: Cleaning & Reshaping Messy Sales Data
-
 ![Excel](https://img.shields.io/badge/Excel-Power_Query-217346?style=flat&logo=microsoftexcel&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Complete-success)
 ![Type](https://img.shields.io/badge/Type-Data_Cleaning-blue)
 
-A mini ETL project using **Microsoft Excel Power Query** to transform a messy, manually-entered employee sales dataset into a clean, analysis-ready table — using a no-code transformation pipeline that's fully repeatable on any future data refresh.
+A mini ETL project using **Microsoft Excel Power Query** to transform a messy, manually-entered employee sales dataset into a clean, analysis-ready table — using a no-code transformation pipeline[...]
 
 ## 🎯 The Problem
 
@@ -25,7 +23,7 @@ Built a repeatable Power Query transformation pipeline — five steps, applied o
 | 1 | Removed blank/null rows | Eliminates breaks in the data structure |
 | 2 | Split combined `LastName(Code)` into `Last Name` + `EmployeeCode` | Separates two different data types that were incorrectly merged |
 | 3 | Merged `First Name` + `Last Name` into a single `NAME` column | Creates one clean, queryable identity field |
-| 4 | **Unpivoted** North/South/East/West columns into `Attribute` (region) + `Value` (sales figure) | Converts wide format into tidy long format — the standard shape required by BI tools, SQL, and pandas |
+| 4 | **Unpivoted** North/South/East/West columns into `Attribute` (region) + `Value` (sales figure) | Converts wide format into tidy long format — the standard shape required by BI tools, SQL, [...]
 | 5 | Standardized data types (text vs. numeric) | Ensures values aggregate and chart correctly downstream |
 
 ![Power Query steps](2_power_query_steps.png)
@@ -49,7 +47,7 @@ Built a repeatable Power Query transformation pipeline — five steps, applied o
 
 ## 💡 Why This Matters
 
-Unpivoting wide data into tidy long-format data is one of the most common real-world data prep tasks in analytics — it's the difference between a spreadsheet a human can read and a dataset a tool (Power BI, SQL, Python/pandas) can actually consume. Every step here is also non-destructive and repeatable: refresh the source file, hit "Refresh" in Power Query, and the same clean output regenerates automatically — no manual rework needed.
+Unpivoting wide data into tidy long-format data is one of the most common real-world data prep tasks in analytics — it's the difference between a spreadsheet a human can read and a dataset a too[...]
 
 ## 📁 Repository Contents
 - `raw_data.xlsx` — original messy dataset
