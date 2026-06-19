@@ -1,0 +1,20 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Excel temporary files
+~$*.xlsx
+*.tmp
+
+# Node modules (if applicable)
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Large data files (optional - uncomment if needed)
+# *.xlsx
